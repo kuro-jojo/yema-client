@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/default_logo_size_48"
+    android:layout_marginTop="@dimen/default_logo_size_48"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <include
+        android:id="@+id/logo_to_profile"
+        layout="@layout/round_logo" />
+
+    <RelativeLayout
+        android:id="@+id/search_bar"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:layout_weight="1"
+        android:background="@drawable/search_bar"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="6dp"
+            android:src="@drawable/search_24" />
+
+        <TextView
+            android:id="@+id/home_search_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="14dp"
+            android:gravity="start|center"
+            android:hint="@string/search_example"
+            app:expandedHintEnabled="false" />
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/assistance_image_view"
+        android:layout_width="@dimen/default_logo_size_48"
+        android:layout_height="@dimen/default_logo_size_48"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/assistance"
+        android:src="@drawable/assistance" />
+</LinearLayout>

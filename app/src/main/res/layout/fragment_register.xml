@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".views.fragments.login.RegisterFragment">
+
+    <RelativeLayout
+        android:id="@+id/welcome_layout"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:gravity="start"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_v2"
+        app:layout_constraintStart_toStartOf="@id/guideline_v1"
+        app:layout_constraintTop_toTopOf="@id/guideline">
+
+        <include
+            android:id="@+id/include_layout"
+            layout="@layout/round_logo"
+            android:layout_width="@dimen/logo_login_size"
+            android:layout_height="@dimen/logo_login_size"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"/>
+
+        <LinearLayout
+            android:id="@+id/frame_58"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@+id/include_layout"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/welcome_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome"
+                android:textAppearance="@style/welcome_" />
+
+            <TextView
+                android:id="@+id/enter_your_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/enter_your_details_to_register"
+                android:textAppearance="@style/enter_your_details_to_register" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/country_reg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="60dp"
+        android:gravity="start"
+        android:text="@string/country_region"
+        android:textAppearance="@style/country_region"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_v2"
+        app:layout_constraintStart_toStartOf="@id/guideline_v1"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_layout" />
+
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/register_ccp"
+        android:layout_width="0dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/border"
+        android:gravity="center_vertical"
+        android:paddingStart="19dp"
+        android:paddingEnd="0dp"
+        app:ccp_arrowColor="@color/text_primary"
+        app:ccp_autoDetectCountry="true"
+        app:ccp_autoFormatNumber="true"
+        app:ccp_defaultNameCode="TG"
+        app:ccp_showArrow="true"
+        app:ccp_showFullName="true"
+        app:ccp_showNameCode="false"
+        app:ccp_textGravity="LEFT"
+        app:ccp_textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_v2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guideline_v1"
+        app:layout_constraintTop_toBottomOf="@+id/country_reg" />
+
+
+    <TextView
+        android:id="@+id/phone_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="start"
+        android:text="@string/phone_number"
+        android:textAppearance="@style/phone_number"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_v2"
+        app:layout_constraintStart_toStartOf="@id/guideline_v1"
+        app:layout_constraintTop_toBottomOf="@+id/register_ccp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/phone_number"
+        android:background="@drawable/border"
+        android:gravity="center|start"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/guideline_v2"
+        app:layout_constraintStart_toStartOf="@id/guideline_v1"
+        app:layout_constraintTop_toBottomOf="@+id/phone_number">
+
+        <TextView
+            android:id="@+id/phone_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="13.04dp"
+            android:gravity="center"
+            android:text="@string/phone_indicator"
+            android:textAppearance="@style/phone_indicator"
+            android:textColor="@color/text_primary" />
+
+        <View
+            android:layout_width="0.3dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="22dp"
+            android:background="@color/black" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/register_phone_number"
+                style="@style/phone_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/flag_transparent"
+                android:hint="@string/hint_number"
+                android:inputType="phone"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/enter_your_4_digit_passcode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/verification_6_digit"
+        android:textAppearance="@style/verification_4_digit"
+        app:layout_constraintEnd_toEndOf="@id/guideline_v2"
+        app:layout_constraintStart_toStartOf="@id/guideline_v1"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+
+    <Button
+        android:id="@+id/register_continue_btn"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_state"
+        android:text="@string/continuer"
+        android:textAppearance="@style/button_continue"
+        app:layout_constraintEnd_toEndOf="@id/guideline_v2"
+        app:layout_constraintStart_toStartOf="@id/guideline_v1"
+        app:layout_constraintTop_toBottomOf="@+id/enter_your_4_digit_passcode" />
+
+    <TextView
+        android:id="@+id/terms_text_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="@string/terms_policies_text"
+        android:textAppearance="@style/terms_text_view"
+        app:layout_constraintEnd_toEndOf="@id/guideline_v2"
+        app:layout_constraintStart_toStartOf="@id/guideline_v1"
+        app:layout_constraintTop_toBottomOf="@+id/register_continue_btn" />
+
+    <TextView
+        android:id="@+id/terms_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:text="@string/terms_policies_link"
+        android:textAppearance="@style/terms_text_view"
+        app:layout_constraintEnd_toEndOf="@id/guideline_v2"
+        app:layout_constraintStart_toStartOf="@id/guideline_v1"
+        app:layout_constraintTop_toBottomOf="@+id/terms_text_text_view" />
+
+    <TextView
+        android:id="@+id/already_have_an_account"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="@string/already_have_an_account"
+        android:textAppearance="@style/already_have_an_account"
+        app:layout_constraintEnd_toEndOf="@id/guideline_v2"
+        app:layout_constraintStart_toStartOf="@id/guideline_v1"
+        app:layout_constraintTop_toBottomOf="@+id/guideline2" />
+
+    <TextView
+        android:id="@+id/continue_as_guest"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="@string/continue_as_guest"
+        android:textAppearance="@style/continue_as_guest"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline_v2"
+        app:layout_constraintStart_toStartOf="@id/guideline_v1"
+        app:layout_constraintTop_toBottomOf="@+id/already_have_an_account" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_v1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_v2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

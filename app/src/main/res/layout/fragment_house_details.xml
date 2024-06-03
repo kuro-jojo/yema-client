@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".views.fragments.main.home.HouseDetailsFragment">
+
+    <LinearLayout
+        android:id="@+id/detail_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <ImageButton
+            android:id="@+id/back_to_previous_fragment"
+            android:layout_width="@dimen/default_logo_size_48"
+            android:layout_height="@dimen/default_logo_size_48"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/go_back"
+            android:src="@drawable/back_24" />
+
+
+        <TextView
+            android:id="@+id/details"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/details"
+            android:textAppearance="@style/details" />
+
+
+        <ImageButton
+            android:id="@+id/house_item_favorite_image_btn"
+            android:layout_width="@dimen/default_logo_size_48"
+            android:layout_height="@dimen/default_logo_size_48"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/add_item_to_favorite"
+            android:src="@drawable/favorite_24" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/primary" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/detail_page"
+        android:scrollbarSize="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="375dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- ImageView for the image -->
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/detail_house_view_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true" />
+
+
+                    <LinearLayout
+                        android:id="@+id/frame_153"
+                        android:layout_width="40dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginEnd="@dimen/default_margin"
+                        android:background="@drawable/house_number_shape"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/detail_house_image_index"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/house_item_image_index"
+                            android:gravity="center"
+                            android:text="@string/house_item_image_index"
+                            android:textAppearance="@style/house_item_image_index" />
+
+                        <View
+                            android:id="@+id/pipe"
+                            android:layout_width="0.6dp"
+                            android:layout_height="8dp"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginEnd="2dp"
+                            android:background="@color/white"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/detail_house_image_total"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/house_item_image_total"
+                            android:textAppearance="@style/house_item_image_index" />
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/frame_274"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardView"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_marginEnd="@dimen/default_margin">
+
+                <TextView
+                    android:id="@+id/detail_house_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/house_item_title"
+                    android:textAppearance="@style/house_item_details" />
+
+                <TextView
+                    android:id="@+id/detail_house_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/detail_house_title"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:textAppearance="@style/house_item_details_price" />
+
+                <TextView
+                    android:id="@+id/detail_house_price_currency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="4dp"
+                    android:layout_toEndOf="@id/detail_house_price"
+                    android:textAppearance="@style/house_item_details_price" />
+
+                <TextView
+                    android:id="@+id/detail_house_rental_term"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="4dp"
+                    android:layout_toEndOf="@id/detail_house_price_currency"
+                    android:text="@string/house_rental_term"
+                    android:textAppearance="@style/house_item_details_price" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/group_235"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/frame_274"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="@dimen/default_margin">
+
+                <RelativeLayout
+                    android:id="@+id/frame_272"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="15dp">
+
+                    <RelativeLayout
+                        android:id="@+id/frame_whatsapp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/leave_us_a_message"
+                            android:src="@drawable/whatsapp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/leave_us_a_"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="4dp"
+                        android:layout_toEndOf="@+id/frame_whatsapp"
+                        android:text="@string/leave_us_a_message"
+                        android:textAppearance="@style/new_user_create_an_account" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/leave_us_a_message_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/frame_272"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="16dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/leave_whatsapp_message"
+                        android:layout_width="0dp"
+                        android:layout_height="37dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_leave_msg"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/leave_whatsapp_message_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="22dp"
+                            android:gravity="center|start"
+                            android:text="@string/is_this_still_available" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/detail_send_msg"
+                        android:layout_width="65dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/border_send_btn"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/send" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/frame_266"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/leave_us_a_message_layout"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/border_share"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/default_margin">
+
+                    <RelativeLayout
+                        android:id="@+id/detail_save"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center">
+
+                        <ImageButton
+                            android:id="@+id/detail_save_image"
+                            android:layout_width="@dimen/default_logo_size_48"
+                            android:layout_height="@dimen/default_logo_size_48"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/default_margin"
+                            android:background="@drawable/circle"
+                            android:contentDescription="@string/save_item"
+                            android:duplicateParentState="true"
+                            android:src="@drawable/wishlist_fill_24" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/detail_save_image"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:duplicateParentState="true"
+                            android:gravity="center"
+                            android:text="@string/save"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/detail_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="48dp"
+                        android:gravity="center">
+
+                        <ImageButton
+                            android:id="@+id/detail_message_image"
+                            android:layout_width="@dimen/default_logo_size_48"
+                            android:layout_height="@dimen/default_logo_size_48"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/default_margin"
+                            android:background="@drawable/circle"
+                            android:contentDescription="@string/send_the_message_with_whatsapp"
+                            android:src="@drawable/chat_24" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/detail_message_image"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:text="@string/message"
+                            android:textSize="11.5sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/detail_share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="48dp"
+                        android:gravity="center">
+
+                        <ImageButton
+                            android:id="@+id/detail_share_image"
+                            android:layout_width="@dimen/default_logo_size_48"
+                            android:layout_height="@dimen/default_logo_size_48"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/default_margin"
+                            android:background="@drawable/circle"
+                            android:contentDescription="@string/share_title"
+                            android:src="@drawable/share_24" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/detail_share_image"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:text="@string/share"
+                            android:textSize="11.5sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/detail_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/group_235"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_marginEnd="@dimen/default_margin">
+
+                <TextView
+                    android:id="@+id/detail_description_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_font_family"
+                    android:text="@string/detail_description"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/detail_description_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/detail_description_title"
+                    android:textAppearance="@style/details_description_content" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/detail_requirement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detail_description"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="@dimen/default_margin">
+
+                <TextView
+                    android:id="@+id/detail_requirement_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_font_family"
+                    android:text="@string/detail_requirement"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/detail_requirement_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/detail_requirement_title"
+                    android:textAppearance="@style/details_description_content" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

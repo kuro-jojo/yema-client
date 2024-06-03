@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".views.fragments.main.wishlist.WishlistGuestFragment">
+
+
+    <TextView
+        android:id="@+id/profile_guest_hi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="@string/wishlist"
+        android:textAppearance="@style/profile_guest_hi"
+        app:layout_constraintEnd_toStartOf="@id/assistance_image_view"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guideline_v1"
+        app:layout_constraintTop_toBottomOf="@id/guideline" />
+
+    <ImageButton
+        android:id="@+id/assistance_image_view"
+        android:layout_width="@dimen/default_logo_size_48"
+        android:layout_height="@dimen/default_logo_size_48"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/assistance"
+        android:src="@drawable/assistance"
+        app:layout_constraintEnd_toEndOf="@id/guideline_v2"
+        app:layout_constraintTop_toBottomOf="@id/guideline" />
+
+
+    <TextView
+        android:id="@+id/guest_sign_in_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/guest_wishlist_text"
+        android:textAppearance="@style/guest_sign_in_text"
+        app:layout_constraintEnd_toEndOf="@id/guideline_v2"
+        app:layout_constraintStart_toStartOf="@id/guideline_v1"
+        app:layout_constraintTop_toBottomOf="@id/guideline2" />
+
+    <Button
+        android:id="@+id/guest_sign_in_btn"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_state"
+        android:text="@string/guest_sign_in"
+        android:textAppearance="@style/button_continue"
+        app:layout_constraintEnd_toEndOf="@id/guideline_v2"
+        app:layout_constraintStart_toStartOf="@id/guideline_v1"
+        app:layout_constraintTop_toBottomOf="@id/guest_sign_in_text" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.48" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_v1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_v2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

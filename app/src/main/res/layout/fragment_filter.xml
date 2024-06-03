@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.fragments.main.search.FilterFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+
+            android:id="@+id/back_to_search"
+            android:layout_width="@dimen/default_logo_size_48"
+            android:layout_height="@dimen/default_logo_size_48"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/go_back"
+            android:src="@drawable/back_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline1" />
+
+        <TextView
+            android:id="@+id/nav_filter_text"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/default_logo_size_48"
+            android:gravity="center"
+            android:text="@string/filter"
+            android:textAppearance="@style/profile_guest_hi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline1" />
+
+        <TextView
+            android:id="@+id/reset_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/default_logo_size_48"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/reset"
+            android:textAppearance="@style/filter"
+            android:textColor="@color/blue_link_bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="30dp"
+        android:background="@android:color/transparent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/type_listing_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/type_of_listing"
+                android:textAppearance="@style/filter_header"
+                app:layout_constraintStart_toEndOf="@id/guideline_v1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/listing_type_radio_group"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@id/guideline_v2"
+                app:layout_constraintStart_toEndOf="@id/guideline_v1"
+                app:layout_constraintTop_toBottomOf="@id/type_listing_text">
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/for_rent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="116dp"
+                    android:gravity="center"
+                    android:text="@string/for_rent"
+                    android:textAppearance="@style/location" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/for_sale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/for_sale" />
+            </RadioGroup>
+
+<!--            <TextView-->
+<!--                android:id="@+id/currency_text"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:text="Type of currency"-->
+<!--                android:textAppearance="@style/filter_header"-->
+<!--                app:layout_constraintStart_toEndOf="@id/guideline_v1"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/listing_type_radio_group" />-->
+
+<!--            <Spinner-->
+<!--                android:id="@+id/currency_spinner"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintStart_toEndOf="@id/guideline_v1"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/currency_text" />-->
+
+            <TextView
+                android:id="@+id/price_range_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/price_range"
+                android:textAppearance="@style/filter_header"
+                app:layout_constraintStart_toEndOf="@id/guideline_v1"
+                app:layout_constraintTop_toBottomOf="@id/listing_type_radio_group" />
+
+            <TextView
+                android:id="@+id/average_listing_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/average_listing_price"
+                android:textColor="@color/secondary"
+                app:layout_constraintStart_toEndOf="@id/guideline_v1"
+                app:layout_constraintTop_toBottomOf="@id/price_range_text" />
+
+            <!--    <TextView-->
+            <!--        android:id="@+id/price_range_values"-->
+            <!--        android:layout_width="wrap_content"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:layout_marginTop="30dp"-->
+            <!--        android:background="@drawable/price_range_slider"-->
+            <!--        android:gravity="center_horizontal"-->
+            <!--        android:padding="5dp"-->
+            <!--        app:layout_constraintEnd_toStartOf="@id/guideline_v2"-->
+            <!--        app:layout_constraintStart_toEndOf="@id/guideline_v1"-->
+            <!--        app:layout_constraintTop_toBottomOf="@id/price_range_text" />-->
+
+            <com.google.android.material.slider.RangeSlider
+                android:id="@+id/price_range_slider"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:labelBehavior="gone"
+                app:layout_constraintEnd_toEndOf="@id/guideline_v2"
+                app:layout_constraintStart_toEndOf="@id/guideline_v1"
+                app:layout_constraintTop_toBottomOf="@id/average_listing_price"
+                app:thumbColor="@color/light_black"
+                app:trackColorActive="@color/light_black"
+                app:trackColorInactive="@color/secondary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-10dp"
+                android:text="@string/less"
+                android:textAppearance="@style/less"
+                app:layout_constraintStart_toEndOf="@id/guideline_v1"
+                app:layout_constraintTop_toBottomOf="@id/price_range_slider" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-10dp"
+                android:text="@string/more"
+                android:textAppearance="@style/less"
+                app:layout_constraintEnd_toEndOf="@id/guideline_v2"
+                app:layout_constraintTop_toBottomOf="@id/price_range_slider" />
+
+            <TextView
+                android:id="@+id/or"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:text="@string/or"
+                android:textAppearance="@style/or"
+                app:layout_constraintEnd_toEndOf="@id/guideline_v2"
+                app:layout_constraintStart_toEndOf="@id/guideline_v1"
+                app:layout_constraintTop_toBottomOf="@id/price_range_slider" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toEndOf="@+id/guideline_v1"
+                app:layout_constraintTop_toBottomOf="@id/or">
+
+                <TextView
+                    android:id="@+id/from_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/from" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/min_price_layout"
+                    android:layout_width="155dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/from_text"
+                    app:expandedHintEnabled="false"
+                    app:placeholderText="100 000"
+                    app:placeholderTextColor="@color/text_unselected">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/min_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="numberDecimal" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/guideline_v2"
+                app:layout_constraintTop_toBottomOf="@id/or">
+
+                <TextView
+                    android:id="@+id/to_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/to" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/max_price_layout"
+                    android:layout_width="155dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/to_text"
+                    app:expandedHintEnabled="false"
+                    app:placeholderText="1 000 000"
+                    app:placeholderTextColor="@color/text_unselected">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/max_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="numberDecimal" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/house_type_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="@string/house_type"
+                android:textAppearance="@style/filter_header"
+                app:layout_constraintStart_toEndOf="@id/guideline_v1"
+                app:layout_constraintTop_toBottomOf="@id/relative_layout" />
+
+            <GridLayout
+                android:id="@+id/house_type_grid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="3"
+                app:layout_constraintStart_toEndOf="@id/guideline_v1"
+                app:layout_constraintTop_toBottomOf="@id/house_type_text">
+
+            </GridLayout>
+
+            <!--    BEDROOMS-->
+
+            <TextView
+                android:id="@+id/bedrooms_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/bedrooms"
+                android:textAppearance="@style/filter_header"
+                app:layout_constraintStart_toEndOf="@id/guideline_v1"
+                app:layout_constraintTop_toBottomOf="@id/house_type_grid" />
+
+            <TextView
+                android:id="@+id/any_bedroom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/selected_square"
+                android:paddingStart="15dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="4dp"
+                android:text="@string/any"
+                android:textAppearance="@style/filter_header"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toStartOf="@+id/_1_bedroom"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@id/guideline_v1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bedrooms_text" />
+
+            <TextView
+                android:id="@+id/_1_bedroom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/unselected_square"
+                android:gravity="center"
+                android:paddingStart="15dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="4dp"
+                android:text="1"
+                android:textAppearance="@style/filter_header"
+                android:textColor="@color/light_black"
+                app:layout_constraintEnd_toStartOf="@+id/_2_bedroom"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/any_bedroom"
+                app:layout_constraintTop_toBottomOf="@id/bedrooms_text" />
+
+            <TextView
+                android:id="@+id/_2_bedroom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/unselected_square"
+                android:gravity="center"
+                android:paddingStart="15dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="4dp"
+                android:text="2"
+                android:textAppearance="@style/filter_header"
+                android:textColor="@color/light_black"
+                app:layout_constraintEnd_toStartOf="@+id/_3_bedroom"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/_1_bedroom"
+                app:layout_constraintTop_toBottomOf="@id/bedrooms_text" />
+
+            <TextView
+                android:id="@+id/_3_bedroom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/unselected_square"
+                android:gravity="center"
+                android:paddingStart="15dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="4dp"
+                android:text="3"
+                android:textAppearance="@style/filter_header"
+                android:textColor="@color/light_black"
+                app:layout_constraintEnd_toStartOf="@+id/_4_bedroom"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/_2_bedroom"
+                app:layout_constraintTop_toBottomOf="@id/bedrooms_text" />
+
+            <TextView
+                android:id="@+id/_4_bedroom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/unselected_square"
+                android:gravity="center"
+                android:paddingStart="15dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="4dp"
+                android:text="4"
+                android:textAppearance="@style/filter_header"
+                android:textColor="@color/light_black"
+                app:layout_constraintEnd_toStartOf="@+id/_5_bedroom"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/_3_bedroom"
+                app:layout_constraintTop_toBottomOf="@id/bedrooms_text" />
+
+            <TextView
+                android:id="@+id/_5_bedroom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/unselected_square"
+                android:gravity="center"
+                android:paddingStart="15dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="4dp"
+                android:text="5+"
+                android:textAppearance="@style/filter_header"
+                android:textColor="@color/light_black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/_4_bedroom"
+                app:layout_constraintTop_toBottomOf="@id/bedrooms_text" />
+
+            <!--    BATHROOMS-->
+
+            <TextView
+                android:id="@+id/bathrooms_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/bathrooms"
+                android:textAppearance="@style/filter_header"
+                app:layout_constraintStart_toEndOf="@id/guideline_v1"
+                app:layout_constraintTop_toBottomOf="@id/any_bedroom" />
+
+            <TextView
+                android:id="@+id/any_bathroom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/selected_square"
+                android:paddingStart="15dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="4dp"
+                android:text="@string/any"
+                android:textAppearance="@style/filter_header"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toStartOf="@+id/_1_bathroom"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@id/guideline_v1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bathrooms_text" />
+
+            <TextView
+                android:id="@+id/_1_bathroom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/unselected_square"
+                android:gravity="center"
+                android:paddingStart="15dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="4dp"
+                android:text="1"
+                android:textAppearance="@style/filter_header"
+                android:textColor="@color/light_black"
+                app:layout_constraintEnd_toStartOf="@+id/_2_bathroom"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/any_bathroom"
+                app:layout_constraintTop_toBottomOf="@id/bathrooms_text" />
+
+            <TextView
+                android:id="@+id/_2_bathroom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/unselected_square"
+                android:gravity="center"
+                android:paddingStart="15dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="4dp"
+                android:text="2"
+                android:textAppearance="@style/filter_header"
+                android:textColor="@color/light_black"
+                app:layout_constraintEnd_toStartOf="@+id/_3_bathroom"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/_1_bathroom"
+                app:layout_constraintTop_toBottomOf="@id/bathrooms_text" />
+
+            <TextView
+                android:id="@+id/_3_bathroom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/unselected_square"
+                android:gravity="center"
+                android:paddingStart="15dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="4dp"
+                android:text="3"
+                android:textAppearance="@style/filter_header"
+                android:textColor="@color/light_black"
+                app:layout_constraintEnd_toStartOf="@+id/_4_bathroom"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/_2_bathroom"
+                app:layout_constraintTop_toBottomOf="@id/bathrooms_text" />
+
+            <TextView
+                android:id="@+id/_4_bathroom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/unselected_square"
+                android:gravity="center"
+                android:paddingStart="15dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="4dp"
+                android:text="4"
+                android:textAppearance="@style/filter_header"
+                android:textColor="@color/light_black"
+                app:layout_constraintEnd_toStartOf="@+id/_5_bathroom"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/_3_bathroom"
+                app:layout_constraintTop_toBottomOf="@id/bathrooms_text" />
+
+            <TextView
+                android:id="@+id/_5_bathroom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/unselected_square"
+                android:gravity="center"
+                android:paddingStart="15dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="4dp"
+                android:text="5+"
+                android:textAppearance="@style/filter_header"
+                android:textColor="@color/light_black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/_4_bathroom"
+                app:layout_constraintTop_toBottomOf="@id/bathrooms_text" />
+
+            <!--    PARKING SPOT-->
+
+            <TextView
+                android:id="@+id/parking_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/parking"
+                android:textAppearance="@style/filter_header"
+                app:layout_constraintStart_toEndOf="@id/guideline_v1"
+                app:layout_constraintTop_toBottomOf="@id/any_bathroom" />
+
+            <TextView
+                android:id="@+id/any_parking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/selected_square"
+                android:paddingStart="15dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="4dp"
+                android:text="@string/any"
+                android:textAppearance="@style/filter_header"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toStartOf="@+id/_1_parking"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@id/guideline_v1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/parking_text" />
+
+            <TextView
+                android:id="@+id/_1_parking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/unselected_square"
+                android:gravity="center"
+                android:paddingStart="15dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="4dp"
+                android:text="1"
+                android:textAppearance="@style/filter_header"
+                android:textColor="@color/light_black"
+                app:layout_constraintEnd_toStartOf="@+id/_2_parking"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/any_parking"
+                app:layout_constraintTop_toBottomOf="@id/parking_text" />
+
+            <TextView
+                android:id="@+id/_2_parking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/unselected_square"
+                android:gravity="center"
+                android:paddingStart="15dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="4dp"
+                android:text="2"
+                android:textAppearance="@style/filter_header"
+                android:textColor="@color/light_black"
+                app:layout_constraintEnd_toStartOf="@+id/_3_parking"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/_1_parking"
+                app:layout_constraintTop_toBottomOf="@id/parking_text" />
+
+            <TextView
+                android:id="@+id/_3_parking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/unselected_square"
+                android:gravity="center"
+                android:paddingStart="15dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="4dp"
+                android:text="3"
+                android:textAppearance="@style/filter_header"
+                android:textColor="@color/light_black"
+                app:layout_constraintEnd_toStartOf="@+id/_4_parking"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/_2_parking"
+                app:layout_constraintTop_toBottomOf="@id/parking_text" />
+
+            <TextView
+                android:id="@+id/_4_parking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/unselected_square"
+                android:gravity="center"
+                android:paddingStart="15dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="4dp"
+                android:text="4"
+                android:textAppearance="@style/filter_header"
+                android:textColor="@color/light_black"
+                app:layout_constraintEnd_toStartOf="@+id/_5_parking"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/_3_parking"
+                app:layout_constraintTop_toBottomOf="@id/parking_text" />
+
+            <TextView
+                android:id="@+id/_5_parking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/unselected_square"
+                android:gravity="center"
+                android:paddingStart="15dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="4dp"
+                android:text="5+"
+                android:textAppearance="@style/filter_header"
+                android:textColor="@color/light_black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/_4_parking"
+                app:layout_constraintTop_toBottomOf="@id/parking_text" />
+
+            <TextView
+                android:id="@+id/living_area_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/living_area"
+                android:textAppearance="@style/filter_header"
+                app:layout_constraintStart_toEndOf="@id/guideline_v1"
+                app:layout_constraintTop_toBottomOf="@id/_5_parking" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toEndOf="@+id/guideline_v1"
+                app:layout_constraintTop_toBottomOf="@id/living_area_text">
+
+                <TextView
+                    android:id="@+id/min_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/min" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="155dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/min_text"
+                    app:expandedHintEnabled="false"
+                    app:placeholderText="10 m²"
+                    app:placeholderTextColor="@color/text_unselected">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/min_area"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="numberDecimal" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/guideline_v2"
+                app:layout_constraintTop_toBottomOf="@id/living_area_text">
+
+                <TextView
+                    android:id="@+id/max_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/max" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="155dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/max_text"
+                    app:expandedHintEnabled="false"
+                    app:placeholderText="50m²"
+                    app:placeholderTextColor="@color/text_unselected">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/max_area"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="numberDecimal" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/keywords_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/keywords"
+                android:textAppearance="@style/filter_header"
+                app:layout_constraintStart_toEndOf="@id/guideline_v1"
+                app:layout_constraintTop_toBottomOf="@id/relative_layout_area" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/keywords_hint"
+                app:layout_constraintEnd_toEndOf="@id/guideline_v2"
+                app:layout_constraintStart_toEndOf="@id/guideline_v1"
+                app:layout_constraintTop_toBottomOf="@id/keywords_text" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/keywords_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:expandedHintEnabled="false"
+                app:layout_constraintEnd_toEndOf="@id/guideline_v2"
+                app:layout_constraintStart_toEndOf="@id/guideline_v1"
+                app:layout_constraintTop_toBottomOf="@id/keywords_text"
+                app:placeholderText="lome, studio"
+                app:placeholderTextColor="@color/text_unselected">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/keywords"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/apply_filter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/button_state"
+                android:text="@string/apply"
+                app:layout_constraintEnd_toEndOf="@id/guideline_v2"
+                app:layout_constraintStart_toStartOf="@id/guideline_v1"
+                app:layout_constraintTop_toBottomOf="@id/keywords_layout" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.1" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_v1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_v2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.95" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

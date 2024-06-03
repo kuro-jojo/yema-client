@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.fragments.login.VerificationFragment">
+
+    <ImageButton
+        android:id="@+id/back_to_previous_fragment"
+        android:layout_width="@dimen/default_logo_size_48"
+        android:layout_height="@dimen/default_logo_size_48"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/go_back"
+        android:src="@drawable/back_24"
+        app:layout_constraintStart_toStartOf="@id/guideline_v1"
+        app:layout_constraintTop_toTopOf="@id/guideline" />
+
+    <ImageButton
+        android:id="@+id/assistance_image_view"
+        android:layout_width="@dimen/default_logo_size_48"
+        android:layout_height="@dimen/default_logo_size_48"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/assistance"
+        android:src="@drawable/assistance"
+        app:layout_constraintEnd_toEndOf="@id/guideline_v2"
+        app:layout_constraintTop_toBottomOf="@id/guideline" />
+
+    <RelativeLayout
+        android:id="@+id/welcome_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_logo_size_48"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="@dimen/default_margin"
+
+        app:layout_constraintEnd_toEndOf="@+id/guideline_v2"
+        app:layout_constraintStart_toStartOf="@id/guideline_v1"
+        app:layout_constraintTop_toBottomOf="@id/assistance_image_view">
+
+        <include
+            android:id="@+id/include_layout"
+            layout="@layout/round_logo"
+            android:layout_width="@dimen/logo_login_size"
+            android:layout_height="@dimen/logo_login_size"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="0dp" />
+
+        <RelativeLayout
+            android:id="@+id/frame_58"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toEndOf="@+id/include_layout">
+
+            <TextView
+                android:id="@+id/verify_your"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:text="@string/verify_your_number"
+                android:textAppearance="@style/Verify_your_number" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/code_to_sent_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:text="@string/code_to_sent_message"
+        android:textAppearance="@style/code_to_sent_message"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/text_normal_size"
+        app:layout_constraintEnd_toEndOf="@id/guideline_v2"
+        app:layout_constraintStart_toStartOf="@id/guideline_v1"
+        app:layout_constraintTop_toBottomOf="@id/welcome_layout" />
+
+    <GridLayout
+        android:id="@+id/opt_grid_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
+        android:columnCount="6"
+        android:rowCount="1"
+        app:layout_constraintEnd_toEndOf="@id/guideline_v4"
+        app:layout_constraintStart_toStartOf="@id/guideline_v3"
+        app:layout_constraintTop_toBottomOf="@id/code_to_sent_message">
+
+        <!-- OTP Input Fields -->
+        <EditText
+            android:id="@+id/opt_code_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1" />
+
+        <EditText
+            android:id="@+id/opt_code_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:enabled="false"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1" />
+
+        <EditText
+            android:id="@+id/opt_code_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:enabled="false"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1" />
+
+        <EditText
+            android:id="@+id/opt_code_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:enabled="false"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1" />
+
+        <EditText
+            android:id="@+id/opt_code_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:enabled="false"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1" />
+
+        <EditText
+            android:id="@+id/opt_code_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:enabled="false"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1" />
+    </GridLayout>
+
+    <LinearLayout
+        android:id="@+id/resend_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/guideline_v4"
+        app:layout_constraintStart_toStartOf="@id/guideline_v3"
+        app:layout_constraintTop_toBottomOf="@id/opt_grid_layout">
+
+
+        <ImageView
+            android:id="@+id/resend_code_image"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:contentDescription="@string/resend_code_in_s"
+            android:src="@drawable/retry_24" />
+
+        <TextView
+            android:id="@+id/resend_code_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/resend_code_in_s"
+            android:textColor="@color/text_secondary"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/verify_continue_btn"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/button_state"
+        android:text="@string/continuer"
+        android:textAppearance="@style/button_continue"
+        app:layout_constraintEnd_toEndOf="@id/guideline_v2"
+        app:layout_constraintStart_toStartOf="@id/guideline_v1"
+        app:layout_constraintTop_toBottomOf="@id/resend_code" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.06" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_v1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_v2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_v3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_v4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

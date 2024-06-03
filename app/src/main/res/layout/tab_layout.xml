@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/light_grey">
+
+    <!-- All Listing Tab -->
+    <LinearLayout
+        android:id="@+id/all_listing_tab"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/new_tab"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/all_listing_tab_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="18dp"
+            android:text="@string/all_listing_tab"
+            android:textAppearance="@style/tab_item_selected"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <!-- New Tab -->
+    <LinearLayout
+        android:id="@+id/new_tab"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/studio_tab"
+        app:layout_constraintStart_toEndOf="@+id/all_listing_tab"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/new_tab_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="18dp"
+            android:text="@string/new_tab"
+            android:textAppearance="@style/tab_item" />
+    </LinearLayout>
+
+    <!-- Studio Tab -->
+    <LinearLayout
+        android:id="@+id/studio_tab"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/bedrooms_tab"
+        app:layout_constraintStart_toEndOf="@+id/new_tab"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/studio_tab_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="18dp"
+            android:text="@string/studio_tab"
+            android:textAppearance="@style/tab_item" />
+    </LinearLayout>
+
+    <!-- Bedrooms Tab -->
+    <LinearLayout
+        android:id="@+id/bedrooms_tab"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/studio_tab"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/bedrooms_tab_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="18dp"
+            android:text="@string/bedroom_3_tab"
+            android:textAppearance="@style/tab_item" />
+    </LinearLayout>
+
+    <!-- Indicator View -->
+    <View
+        android:id="@+id/tab_indicator"
+        android:layout_width="20dp"
+        android:layout_height="2dp"
+        android:background="@color/light_black"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="0dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".views.MainActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_main_container_view"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/main_navigation_path" />
+
+    <LinearLayout
+        android:id="@+id/nav_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:id="@+id/nav_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/default_margin"
+            android:paddingBottom="@dimen/default_margin">
+
+            <ImageView
+                android:id="@+id/nav_home_image"
+                android:layout_width="@dimen/navigation_button_size"
+                android:layout_height="@dimen/navigation_button_size"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:focusable="false"
+                android:src="@drawable/home_black_24" />
+
+
+            <TextView
+                android:id="@+id/nav_home_text"
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:gravity="center"
+                android:text="@string/home"
+                android:textAppearance="@style/home"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:id="@+id/nav_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/default_margin"
+            android:paddingBottom="@dimen/default_margin">
+
+            <ImageView
+                android:id="@+id/nav_search_image"
+                android:layout_width="@dimen/navigation_button_size"
+                android:layout_height="@dimen/navigation_button_size"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:focusable="false"
+                android:src="@drawable/search_24" />
+
+            <TextView
+                android:id="@+id/nav_search_text"
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:gravity="center"
+                android:text="@string/search"
+                android:textAppearance="@style/search" />
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:id="@+id/nav_wishlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/default_margin"
+            android:paddingBottom="@dimen/default_margin">
+
+            <ImageView
+                android:id="@+id/nav_wishlist_image"
+                android:layout_width="@dimen/navigation_button_size"
+                android:layout_height="@dimen/navigation_button_size"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:focusable="false"
+                android:src="@drawable/wishlist_24" />
+
+            <TextView
+                android:id="@+id/nav_wishlist_text"
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:gravity="center"
+                android:text="@string/wishlist"
+                android:textAppearance="@style/wishlist" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nav_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/default_margin"
+            android:paddingBottom="@dimen/default_margin">
+
+            <ImageView
+                android:id="@+id/nav_profile_image"
+                android:layout_width="@dimen/navigation_button_size"
+                android:layout_height="@dimen/navigation_button_size"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:focusable="false"
+                android:src="@drawable/profile_24" />
+
+            <TextView
+                android:id="@+id/nav_profile_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/profile"
+                android:textAppearance="@style/profile" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

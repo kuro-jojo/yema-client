@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:layout_margin="@dimen/default_margin"
+    android:layout_marginBottom="100dp"
+    android:background="@drawable/border_snackbar_wishlist"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="@dimen/default_logo_size_48"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="30dp"
+        android:src="@drawable/wishlist_fill_white_24" />
+
+    <TextView
+        android:id="@+id/item_saved_to_wishlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="10dp"
+        android:gravity="top"
+        android:text="@string/item_saved_to_wishlist"
+        android:textAppearance="@style/item_saved_to_wishlist" />
+
+</LinearLayout>

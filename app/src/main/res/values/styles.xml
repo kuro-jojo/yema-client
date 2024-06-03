@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="by_miaplenou">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="link_activity">
+        <item name="android:layout_weight">900</item>
+        <item name="android:textColor">@color/blue_link_bold</item>
+    </style>
+
+    <style name="welcome_">
+        <item name="android:textSize">24sp</item>
+        <item name="android:letterSpacing">-0.01</item>
+        <item name="android:textColor">#111111</item>
+        <item name="fontFamily">@font/lato_bold</item>
+    </style>
+
+    <style name="enter_your_details_to_register">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#111111</item>
+    </style>
+
+    <style name="country_region">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">#111111</item>
+    </style>
+
+    <style name="ccp_country">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="phone_number">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">#111111</item>
+    </style>
+
+    <style name="phone_indicator">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#111111</item>
+    </style>
+
+    <style name="phone_indicator_black">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="verification_4_digit">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="button_continue">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="terms_text_view">
+        <item name="android:textSize">11sp</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:textColor">#111111</item>
+    </style>
+
+    <style name="already_have_an_account">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="new_user_create_an_account">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="continue_as_guest">
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">#111111</item>
+    </style>
+
+    <style name="Verify_your_number">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#111111</item>
+    </style>
+
+    <style name="code_to_sent_message">
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">#111111</item>
+    </style>
+
+    <style name="incorrect_code">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/text_red_dark</item>
+    </style>
+
+    <style name="search_example">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">#BEBEBE</item>
+    </style>
+    <style name="search_input">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/light_black</item>
+    </style>
+    <style name="house_item_title">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#111111</item>
+    </style>
+
+    <style name="house_item_price">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">#111111</item>
+    </style>
+
+    <style name="house_item_image_index">
+        <item name="android:textSize">9sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="wishlist">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#888787</item>
+    </style>
+
+    <style name="home">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#888787</item>
+    </style>
+
+    <style name="search">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#888787</item>
+    </style>
+
+    <style name="profile">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#888787</item>
+    </style>
+
+    <style name="tab_item">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/dark_grey</item>
+    </style>
+
+    <style name="tab_item_selected">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="details">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="house_item_details">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#111111</item>
+        <item name="fontFamily">@font/lato_bold</item>
+    </style>
+
+    <style name="house_item_details_price">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#606060</item>
+    </style>
+
+    <style name="details_description_content">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#606060</item>
+    </style>
+
+    <style name="profile_guest_hi">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#111111</item>
+    </style>
+
+    <style name="guest_sign_in_text">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="guest_privacy_policy">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">#111111</item>
+    </style>
+
+    <style name="profile_title">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="user_id">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#111111</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="your_number">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">#111111</item>
+    </style>
+
+    <style name="settings">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">#111111</item>
+    </style>
+
+    <style name="CustomButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@color/text_red_dark</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="edit">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">#111111</item>
+        <item name="background">@android:color/transparent</item>
+    </style>
+
+    <style name="filter">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">#111111</item>
+        <item name="android:textStyle">bold</item>
+        <item name="background">@android:color/transparent</item>
+    </style>
+
+    <style name="wishlist_item_title">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#111111</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="wishlist_item_price">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">#606060</item>
+    </style>
+
+    <style name="item_saved_to_wishlist">
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="location">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#111111</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="filter_header">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#000</item>
+    </style>
+
+    <style name="less">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#111111</item>
+    </style>
+
+    <style name="or">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">#111111</item>
+    </style>
+
+    <style name="result_found">
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">#352F16</item>
+    </style>
+</resources>

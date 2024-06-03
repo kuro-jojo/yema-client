@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey_plus"
+    tools:context=".views.fragments.main.search.SearchFragment">
+
+    <TextView
+        android:id="@+id/nav_search_text"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/default_logo_size_48"
+        android:gravity="center"
+        android:text="@string/search"
+        android:textAppearance="@style/profile_guest_hi"
+        app:layout_constraintEnd_toEndOf="@id/guideline_v2"
+        app:layout_constraintStart_toStartOf="@id/guideline_v1"
+        app:layout_constraintTop_toBottomOf="@id/guideline" />
+
+    <TextView
+        android:id="@+id/filter_search"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/default_logo_size_48"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:text="@string/filter"
+        android:textAppearance="@style/filter"
+        android:textColor="@color/blue_link_bold"
+        app:layout_constraintEnd_toEndOf="@id/guideline_v2"
+        app:layout_constraintTop_toBottomOf="@id/guideline" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:background="@drawable/border_search"
+        android:paddingStart="@dimen/default_margin"
+        android:paddingEnd="@dimen/default_margin"
+        android:paddingBottom="@dimen/default_margin"
+        app:layout_constraintEnd_toEndOf="@id/guideline_v2"
+        app:layout_constraintStart_toStartOf="@id/guideline_v1"
+        app:layout_constraintTop_toBottomOf="@id/nav_search_text">
+
+        <TextView
+            android:id="@+id/location_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="start"
+            android:text="@string/location_town"
+            android:textAppearance="@style/location"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:id="@+id/search_bar"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/default_logo_size_48"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/search_bar_rect"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/location_text">
+
+            <ImageView
+                android:id="@+id/search_icon"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="6dp"
+                android:contentDescription="@string/search"
+                android:src="@drawable/search_black_24" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/home_search_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="14dp"
+                android:background="@android:color/transparent"
+                android:gravity="center|start"
+                android:hint="@string/search_example"
+                android:textAppearance="@style/search_input" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/budget_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="start"
+            android:text="@string/budget"
+            android:textAppearance="@style/location"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/search_bar" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/budget_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/default_logo_size_48"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/search_bar_rect"
+            android:gravity="start|center"
+            android:hint="3000"
+            android:inputType="numberDecimal"
+            android:paddingStart="30dp"
+            android:paddingEnd="8dp"
+            android:textAppearance="@style/search_input"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/budget_text" />
+
+
+        <Button
+            android:id="@+id/get_search_results"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            android:background="@drawable/button_state"
+            android:text="@string/see_results"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/budget_edit_text" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/search_number_result"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/search_result_found"
+        android:textAppearance="@style/result_found"
+        app:layout_constraintEnd_toEndOf="@id/guideline_v2"
+        app:layout_constraintStart_toEndOf="@id/guideline_v1"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline_v2"
+        app:layout_constraintStart_toStartOf="@id/guideline_v1"
+        app:layout_constraintTop_toBottomOf="@+id/search_number_result" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_v1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_v2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <ProgressBar
+        android:id="@+id/search_progressbar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/primary"
+        app:layout_constraintBottom_toBottomOf="@+id/search_recycler_view"
+        app:layout_constraintEnd_toEndOf="@id/guideline_v2"
+        app:layout_constraintStart_toStartOf="@+id/guideline_v1"
+        app:layout_constraintTop_toTopOf="@+id/search_recycler_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "547958412564",
+    "project_id": "yema-32964",
+    "storage_bucket": "yema-32964.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:547958412564:android:0eb4f8821f90040eb8de01",
+        "android_client_info": {
+          "package_name": "com.kuro.yema"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7oPV4IWuXKgH6TjWxFAsY6uCR-UZ1eZU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

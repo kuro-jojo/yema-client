@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="396dp"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="28dp"
+    android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="346dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- ImageView for the image -->
+
+            <ImageView
+                android:id="@+id/detail_house_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/house_images"
+                android:scaleType="centerCrop" />
+
+            <RelativeLayout
+                android:id="@+id/frame_153"
+                android:layout_width="35dp"
+                android:layout_height="15.73dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/house_number_shape"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/house_item_image_index"
+                    android:layout_width="wrap_content"
+                    android:layout_height="12dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="6dp"
+
+                    android:gravity="center"
+                    android:text="@string/house_item_image_index"
+                    android:textAppearance="@style/house_item_image_index" />
+
+                <View
+                    android:id="@+id/pipe"
+                    android:layout_width="0.6dp"
+                    android:layout_height="8dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/house_item_image_index"
+                    android:background="@color/white"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/house_item_image_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="12dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="3dp"
+                    android:layout_toEndOf="@id/pipe"
+                    android:gravity="center"
+                    android:text="@string/house_item_image_total"
+                    android:textAppearance="@style/house_item_image_index" />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:id="@+id/frame_249"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_below="@+id/cardView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="358dp">
+
+        <RelativeLayout
+            android:id="@+id/frame_83"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="0dp">
+
+            <TextView
+                android:id="@+id/house_item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="19dp"
+                android:gravity="top"
+                android:text="@string/house_item_title"
+                android:textAppearance="@style/house_item_title"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/house_item_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="top"
+                android:text="@string/house_item_price"
+                android:textAppearance="@style/house_item_price" />
+
+            <TextView
+                android:id="@+id/house_item_price_currency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="4dp"
+                android:layout_toEndOf="@id/house_item_price"
+                android:textAppearance="@style/house_item_price" />
+
+            <TextView
+                android:id="@+id/house_item_rental_term"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="4dp"
+                android:layout_toEndOf="@id/house_item_price_currency"
+                android:text="@string/house_rental_term"
+                android:textAppearance="@style/house_item_price" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true">
+
+            <ImageButton
+                android:id="@+id/house_item_favorite_image_btn"
+                android:layout_width="@dimen/fav_home_image_btn_width"
+                android:layout_height="@dimen/fav_home_image_btn_height"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/add_item_to_favorite"
+                android:src="@drawable/favorite_24" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
